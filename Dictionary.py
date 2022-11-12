@@ -45,7 +45,8 @@ while True:
 
         # Display contacts.
         elif choice == 3:
-            print("\nContacts:\n")
+            print("\nContacts:", len(dictionary))
+            print()
             for i in dictionary:
                 print("     Full name:", i)
                 for key, value in dictionary[i].items():
