@@ -22,8 +22,10 @@ while True:
 
         # Ask personal data for contact tracing.
         if choice == 1:
-            name = str(input("\nFull name: "))
             try:
+                name = str(input("\nFull name: "))
+                if name in dictionary:
+                    raise ValueError
                 age = int(input("Age: "))
                 contact = int(input("Phone Number: "))
             except ValueError:
